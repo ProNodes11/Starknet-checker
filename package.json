@@ -1,0 +1,21 @@
+{
+  "name": "starknet-checker",
+  "version": "1.0.0",
+  "description": "Скрипт проверяет количество успешных транз, сколько дней кошелек был активен, со сколькома адресами взаимодейтвовал и тд",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProNodes11/Starknet-checker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProNodes11/Starknet-checker/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/ProNodes11/Starknet-checker#readme"
+}
