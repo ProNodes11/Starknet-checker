@@ -24,12 +24,13 @@ async function fetchInfo(address, unicAddress) {
             'Sec-Fetch-Site': 'cross-site',
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
         };
-        const response = await  fetch('https://starkscan.stellate.sh/', {
+        const response = await  fetch('https://api.starkscan.co/graphql', {
             method: 'POST',
             headers: headers,
             body: payload
         })
-        const balances_response = await  fetch('https://starkscan.stellate.sh/', {
+        // console.log(response)
+        const balances_response = await  fetch('https://api.starkscan.co/graphql', {
             method: 'POST',
             headers: headers,
             body: balance_payload
@@ -96,7 +97,7 @@ async function main() {
     for (let wallet of wallets){
         process.stdout.clearLine();  
         process.stdout.cursorTo(0); 
-        process.stdout.write(`Progress ${counter}/${wallets.length}`);
+        process.stdout.write(`Progress ${counter}/${wallets.length} `);
         await fetchInfo(wallet, [])
         counter ++
     }
