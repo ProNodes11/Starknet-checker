@@ -62,7 +62,7 @@ async function fetchInfo(address, unicAddress) {
             }
             nonce = data.data.transactions.edges.length
         }
-        console.log(balanceString)
+        // console.log(balanceString)
         addRowToCSV(address, balanceString, nonce, unicAddress.length + 1, await formatDate(firstDay), await formatDate(lastDay),  await dateDiff(firstDay, lastDay))
     } catch (error) {
         console.log(`Address ${address} Failed`.red)
@@ -101,6 +101,7 @@ async function main() {
         await fetchInfo(wallet, [])
         counter ++
     }
+    console.log(`Результаты записаны в файл ${filename}`)
 }
 
 main()
